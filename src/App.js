@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
+import TodoWrapper from './components/TodoWrapper';
 import './App.css';
 
-function App() {
+const App = () => {
+  const bgStyle = {
+    background: `url(${process.env.PUBLIC_URL + '/Images/bg-1.jpg'}) no-repeat center`,
+    backgroundSize: 'cover',
+    width: '100%',
+    height: '100vh',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App' style={bgStyle}>
+      <TodoWrapper />
     </div>
   );
 }
