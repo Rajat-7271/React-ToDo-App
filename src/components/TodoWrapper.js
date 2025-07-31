@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import TodoForm from './TodoForm'
 import { v4 as uuidv4 } from "uuid"
-import { isEditable } from '@testing-library/user-event/dist/utils';
 import EditTodoForm from './EditTodoForm';
 import Todo from './Todo';
 
@@ -16,17 +15,15 @@ function TodoWrapper() {
     }
 
     //Delete Todo
-    const deleteTodo = (id) => setTodos(todos.filter((todo) => todo.id != id));
+    const deleteTodo = (id) => setTodos(todos.filter((todo) => todo.id !== id));
 
     //Toggle Complete Todo  
     const toggleComplete = (id) => {
         setTodos(
             todos.map((todo) => todo.id === id ? {
-                ...todo, completed: !todo.
-                    completed
+                ...todo, completed: !todo.completed
             } : todo)
         )
-
     }
 
     //Edit Todo
@@ -37,9 +34,9 @@ function TodoWrapper() {
     }
 
     //Edit Task Todo
-    const editTask = (task,id) =>{
+    const editTask = (task, id) => {
         setTodos(
-            todos.map((todo)=>todo.id === id? {...todo,task,isEditing:!todo.isEditing}:todo)
+            todos.map((todo) => todo.id === id ? { ...todo, task, isEditing: !todo.isEditing } : todo)
         )
     }
 
@@ -61,9 +58,7 @@ function TodoWrapper() {
                     editTodo={editTodo}
                     toggleComplete={toggleComplete}
                 />
-            )
-            )}
-
+            ))}
         </div>
     )
 }
