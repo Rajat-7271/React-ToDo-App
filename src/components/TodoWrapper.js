@@ -44,7 +44,7 @@ function TodoWrapper() {
 
     return (
         <div className='TodoWrapper'>
-            <h1>Web Development Tasks!</h1>
+            <h1>Today's Tasks</h1>
             <TodoForm addTodo={addTodo} />
 
             {/* Display Todos */}
