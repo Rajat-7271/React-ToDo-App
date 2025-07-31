@@ -11,11 +11,6 @@ You can add, edit, delete, and mark tasks as complete.
 
 ---
 
-## 📸 Screenshots
-![App Screenshot](./screenshot.png)
-
----
-
 ## ✨ Features
 - ➕ Add Tasks
 - 📝 Edit Tasks
@@ -66,7 +61,7 @@ npm run deploy
 Made with ❤️ by **Rajat Bhakte**
 
 - [GitHub](https://github.com/Rajat-7271)
-- [LinkedIn](https://www.linkedin.com)
+- [LinkedIn](https://www.linkedin.com/in/rajat-bhakte/)
 
 ---
 
